@@ -17,7 +17,7 @@ For users unfamiliar with git, the current version of the repository can be down
 
 Otherwise, by using the command line
 
-$ git clone --bare https://github.com/IgnacioFabietti/Artefact-Removal-Benchmarking-Tool
+$ git clone --bare https://github.com/IgnacioFabietti/ARCT
 
 Makes a bare clone of the external repository in a local directory
 
