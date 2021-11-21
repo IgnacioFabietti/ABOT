@@ -1,6 +1,6 @@
 # Artefact-Detection-And-Removal-Benchmarking-Tool
 
-DOI:10.5281/zenodo.5716306
+DOI:10.5281/zenodo.5717098
 
 Different sources of noise are present in the brain, and to accurately understand the brain functionality, they must be removed a priory of the study. Due to the nature and complexity of both neuronal signals and artefacts, computational techniques provide powerful tools for their detection and removal. Despite many studies available in the literature, there is no study that facilitates the selection of an appropriate method for a given signal. Here we present the code of an online benchmarking tool that has been developed to aid an appropriate selection of machine learning based methods and to compare obtained results with the state-of-the-art.
 
