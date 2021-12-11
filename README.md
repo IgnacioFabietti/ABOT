@@ -1,4 +1,4 @@
-# Artefact-Detection-And-Removal-Benchmarking-Tool
+# An open-source online tool for machine learning-based artefact removal bench-marking (A.R.B.O.T.) and literature overview.
 
 DOI:10.5281/zenodo.5717098
 
