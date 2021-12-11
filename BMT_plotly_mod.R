@@ -27,7 +27,7 @@ ui <- fluidPage(
   
   theme = shinythemes::shinytheme("lumen"),  
   
-  titlePanel("Artifact Removal Benchmarking Tool"),
+  titlePanel("Artifact Removal Benchmarking Online Tool"),
   
   sidebarPanel(width=3,
     fluidRow(
