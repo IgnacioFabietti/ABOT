@@ -17,12 +17,12 @@ For users unfamiliar with git, the current version of the repository can be down
 
 Otherwise, by using the command line
 
-$ git clone --bare https://github.com/IgnacioFabietti/ARCT
+$ git clone --bare https://github.com/IgnacioFabietti/ARBOT
 
 Makes a bare clone of the external repository in a local directory
 
 
 ## Online site:
-https://nachodev.shinyapps.io/ARPCT/
+https://nachodev.shinyapps.io/ARBOT/
 
 **Feel free to [email me](mailto:n0892706@my.ntu.ac.uk) for help**
