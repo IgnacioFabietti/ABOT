@@ -1,4 +1,4 @@
-# An open-source online tool for machine learning-based artefact removal bench-marking (A.R.B.O.T.) and literature overview.
+# An open-source online tool for machine learning-based artefact removal bench-marking (ABOT) and literature overview.
 
 DOI:10.5281/zenodo.5773968
 
@@ -9,7 +9,7 @@ The source code is in the file BMT_plotly_mod.R, which takes the alert message f
 Dependencies:
 R version 4.0.5 (2021-03-31)
 
-Packages : The application use the following packages : shiny, shinyjs, DT, readxl, shinyWidgets, ggplot2, dplyr, plotly.
+Packages : The application use the following packages : shiny, shinyjs, shinyalert, DT, readxl, shinyWidgets, ggplot2, dplyr, plotly.
 
 ## Downloading the repository :arrow_down:
 
@@ -17,12 +17,12 @@ For users unfamiliar with git, the current version of the repository can be down
 
 Otherwise, by using the command line
 
-$ git clone --bare https://github.com/IgnacioFabietti/ARBOT
+$ git clone --bare https://github.com/IgnacioFabietti/ABOT
 
 Makes a bare clone of the external repository in a local directory
 
 
 ## Online site:
-https://nachodev.shinyapps.io/ARBOT/
+https://nachodev.shinyapps.io/ABOT/
 
 **Feel free to [email me](mailto:n0892706@my.ntu.ac.uk) for help**
