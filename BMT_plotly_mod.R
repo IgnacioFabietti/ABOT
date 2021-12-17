@@ -1,19 +1,13 @@
 library(shiny)
 library(shinyjs)
 library(DT)
-# library(shinydashboard)
 library(readxl)
 library(shinyWidgets)
-# library(shinyBS)
-# library(flexdashboard)
 library(ggplot2)
 library(dplyr)
-# library(mailR)
 library(plotly)
-#library(mailR)
-# library(emayili)
+library(shinyalert)
 
-#values<-read.csv(file="online table.csv")
 values<-read_excel("online table v2.xlsx")
 
 ref<-read_excel("otr v2.xlsx")
@@ -21,7 +15,7 @@ ref<-read_excel("otr v2.xlsx")
 #ref<-read.csv(file="otr.csv")
 # Define UI for slider demo app ----
 ui <- fluidPage(
-  
+  useShinyalert(),
   # setBackgroundColor("AliceBlue"),
   #shinythemes::themeSelector(),
   
@@ -185,12 +179,16 @@ shinyserver <-
       else{
         res<-res %>% filter(Method %in% input$Method)
       }
+      
+      if(nrow(res)<2){
+        shinyalert("Oops!", "Less than two examples selected", type = "error")}
+      res<-res
     })
     
-
     #generate the four plots
     output$plot_ex <- renderPlotly({
-      req(nrow(plottingdata()) > 0)
+      
+      req(nrow(plottingdata()) > 1)
       if (is.na(input$num_n)){num_n<-0}else{num_n<-input$num_n}
       gg<-qplot(y=plottingdata()$`Training Examples`, x="",
                      na.rm = TRUE, fill= I("orangered"), ylab="",
@@ -215,7 +213,7 @@ shinyserver <-
     })
     
     output$plot_fe <- renderPlotly({
-      req(nrow(plottingdata()) > 0)
+      req(nrow(plottingdata()) > 1)
       if (is.na(input$num_f)){num_f<-0}else{num_f<-input$num_f}
       gg<-qplot(y=plottingdata()$Features, x="",
                 na.rm = TRUE, fill= I("palegreen"), ylab="",
@@ -239,7 +237,7 @@ shinyserver <-
     })
     
     output$plot_hp <- renderPlotly({
-      req(nrow(plottingdata()) > 0)
+      req(nrow(plottingdata()) > 1)
       if (is.na(input$num_p)){num_p<-0}else{num_p<-input$num_p}
       gg<-qplot(y=plottingdata()$Hyperparameters, x="",
                 na.rm = TRUE, fill= I("royalblue"), ylab="",
@@ -270,7 +268,7 @@ shinyserver <-
       {s<-1/(1+num_s) }
       if(input$radio==3)
       {s<-1*(1-1/(1+num_s))}
-      req(nrow(plottingdata()) > 0)
+      req(nrow(plottingdata()) > 1)
       gg<-qplot(y=plottingdata()$`Normalised Performance`, x="",
                 na.rm = TRUE, fill= I("goldenrod"), ylab="",
                 geom=c("violin"))+
